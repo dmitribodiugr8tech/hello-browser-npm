@@ -10,6 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "arithmetic": "^1.0.1",
+    "maplibre-gl": "^4.5.1",
+    "radar-sdk-js": "^4.3.4",
     "repeat-string": "^1.6.1"
   }
 }
