@@ -9,11 +9,25 @@
 
 <!-- Include a bundle which was generated -->
 <script type="text/javascript">
-  Radar.initialize('prj_test_pk_73403ef05264414873c1acffb2361518472fca5f', { /* options */ });
+  debugger;
+  Radar.initialize('prj_test_pk_b4a8a35f30d8d51199ffaaa1cfa2d205df7f6f12', { /* options */ });
   Radar.setUserId('dmitri.bodiu');
-  Radar.trackOnce()
+  debugger;
+  
+  Radar.getLocation()
   .then((result) => {
-    const { location, user, events } = result;
+    const { location } = result;
+    // do something with location
+	debugger;
+  })
+  .catch((err) => {
+    // handle error
+	debugger;
+  });
+  
+  Radar.trackOnce({fraud: true})
+  .then((result) => {
+    const { location, user, events, token } = result;
     // do something with location, user, or events
 	console.log(user);
 	debugger;
