@@ -1,6 +1,7 @@
 <h1>JavaScript the <i>New</i> Way</h1>
 
-<script src="https://js.radar.com/v4.3.4/radar.min.js"></script>
+<link href="https://js.radar.com/v4.4.7/radar.css" rel="stylesheet">
+<script src="https://js.radar.com/v4.4.7/radar.min.js"></script>
 
 <h3>Samples</h3>
 
@@ -25,7 +26,7 @@
 	debugger;
   });
   
-  Radar.trackOnce({fraud: true})
+  Radar.trackVerified({skipVerifyApp: true})
   .then((result) => {
     const { location, user, events, token } = result;
     // do something with location, user, or events
