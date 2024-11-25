@@ -3,8 +3,9 @@
 <link href="https://js.radar.com/v4.4.7/radar.css" rel="stylesheet">
 <script src="https://js.radar.com/v4.4.7/radar.min.js"></script>
 
-<h3>Samples</h3>
-
+<textarea  id="location">Location</textarea >
+<textarea  id="user">User</textarea >
+<textarea  id="token">Token</textarea >
 
 <div id="fillin"></div>
 
@@ -30,6 +31,14 @@
   .then((result) => {
     const { location, user, events, token } = result;
     // do something with location, user, or events
+	var locationEl = document.getElementById('location');
+        locationEl.value = JSON.stringify(location);
+		
+		var userEl = document.getElementById('user');
+        userEl.value = JSON.stringify(user);
+		
+		var tokenEl = document.getElementById('token');
+        tokenEl.value = JSON.stringify(token);
 	console.log(user);
 	debugger;
   })
